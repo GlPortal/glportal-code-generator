@@ -1,7 +1,6 @@
 # generator-cpp-suite
 
-A generator for [Yeoman](http://yeoman.io).
-
+A generator for [Yeoman](http://yeoman.io) based on https://github.com/gpichot/generator-cpp-suite
 ## Purpose
 I use it to set up new C++ project with CMake configured.
 It automatically sets up a git repository in the current directory.
@@ -19,18 +18,17 @@ It currently supports the following tools:
 a repository of CMake modules.
 
 ## Usage
+To install type as root 
+
+    npm link
+
 To create a new project in an empty directory run:
 
-    yo cpp-suite
+    yo glportal
 
 ## Additional commands
 ### New class and test
 An additional command can be used to automatically create a new C++ class 
 with test using:
 
-    yo cpp-suite:addclass
-
-## TODO
-
-* Memory Leaks detection during unit testing
-* Automatic C++ Style checks (with CppChecks)
+    yo glportal:addclass

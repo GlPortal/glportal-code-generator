@@ -27,7 +27,11 @@ CppClassGenerator.prototype.basicDetails = function basicDetails() {
     default: ''
   }, {
     name: 'folder',
-    message: 'In folder (src/...):',
+    message: 'In folder (source/...):',
+    default: ''
+  }, {
+    name: 'includeGuard',
+    message: 'Include Guard:',
     default: ''
   }, {
     name: 'headerOnly',
@@ -38,7 +42,9 @@ CppClassGenerator.prototype.basicDetails = function basicDetails() {
 
   this.prompt(prompts, function (props) {
     this.className = props.className;
+    this.includeGuard = props.includeGuard;
     this.classNameLower = props.className.toLowerCase();
+    this.classNameUpper = props.className.toUpperCase();
     this.parentClass = props.parent;
     this.folder = props.folder;
     this.folder = this.folder == '' ? '' : this.folder + '/';
@@ -48,14 +54,9 @@ CppClassGenerator.prototype.basicDetails = function basicDetails() {
 };
 
 CppClassGenerator.prototype.source = function source() {
-  this.mkdir('src/' + this.folder);
-  this.template('src/foo.hpp', 'src/' + this.folder + this.className.toLowerCase() + '.hpp');
+  this.mkdir('source/' + this.folder);
+  this.template('src/foo.hpp', 'source/' + this.folder + this.className + '.hpp');
   if(!this.headerOnly) {
-    this.template('src/foo.cpp', 'src/' + this.folder + this.className.toLowerCase() + '.cpp');
+    this.template('src/foo.cpp', 'source/' + this.folder + this.className + '.cpp');
   }
-}
-
-CppClassGenerator.prototype.test = function test() {
-  this.mkdir('tests/' + this.folder);
-  this.template('tests/foo.cpp', 'tests/' + this.folder + this.className.toLowerCase() + '.cpp');
 }
