@@ -1,4 +1,4 @@
-# generator-cpp-suite
+# yo-glportal
 
 A generator for [Yeoman](http://yeoman.io) based on https://github.com/gpichot/generator-cpp-suite
 ## Purpose
