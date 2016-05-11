@@ -27,8 +27,7 @@ To create a new project in an empty directory run:
     yo glportal
 
 ## Additional commands
-### New class and test
-An additional command can be used to automatically create a new C++ class 
-with test using:
+### New class
+An additional command can be used to automatically create a new C++ class:
 
     yo glportal:addclass
