@@ -55,8 +55,8 @@ CppClassGenerator.prototype.basicDetails = function basicDetails() {
 
 CppClassGenerator.prototype.source = function source() {
   this.mkdir('source/' + this.folder);
-  this.template('src/foo.hpp', 'source/' + this.folder + this.className + '.hpp');
+  this.template('source/foo.hpp', 'source/' + this.folder + this.className + '.hpp');
   if(!this.headerOnly) {
-    this.template('src/foo.cpp', 'source/' + this.folder + this.className + '.cpp');
+    this.template('source/foo.cpp', 'source/' + this.folder + this.className + '.cpp');
   }
 }
