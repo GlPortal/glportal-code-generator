@@ -1,4 +1,4 @@
-# yo-glportal
+# GlPortal Code Generator
 
 A [Yeoman](http://yeoman.io) generator for GlPortal based on https://github.com/gpichot/generator-cpp-suite
 
