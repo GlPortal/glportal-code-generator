@@ -12,6 +12,11 @@ To create a new project in an empty directory run:
     yo glportal
 
 ## Additional commands
+### Add new system
+An additional command can be used to automatically create a new system:
+
+    yo glportal:addsystem
+
 ### New class
 An additional command can be used to automatically create a new C++ class:
 
